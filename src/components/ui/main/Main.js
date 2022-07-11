@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import useGetRequest from "../../hooks/useGetRequest";
+import useGetRequest from "hooks/useGetRequest";
 import { MainContainer, UsersContainer } from "./MainStyled";
-import { USERL_BASE_URL } from "../../config/globals";
-import UserCard from "../../library/user_card/UserCard";
+import { USERL_BASE_URL } from "config/globals";
+import UserCard from "library/user_card/UserCard";
 
 const Main = () => {
   const {
@@ -23,6 +23,7 @@ const Main = () => {
       <UsersContainer>
         {usersData?.list?.map((user) => (
           <UserCard
+            key={user.id}
             user_image={`${user.imageUrl}/v=${user.id}`}
             prefix={user.prefix}
             name={user.name}

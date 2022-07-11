@@ -1,4 +1,4 @@
-import Main from "./components/main/Main";
+import Main from "./components/ui/main/Main";
 
 const routes = [
   {
@@ -6,6 +6,10 @@ const routes = [
     element: <Main />,
     uniqueKey: "route_1",
   },
+  // {
+  //   path: "/:userId",
+  //   element
+  // },
 ];
 
 export default routes;
