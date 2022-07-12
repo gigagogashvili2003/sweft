@@ -4,20 +4,21 @@ import { CardContainer } from "./UserCardStyled";
 // Reusable user_card library component.
 
 const UserCard = (props) => {
-  const { user_image, prefix, name, lastName, user_title } = props;
+  const { user_image, prefix, name, lastName, user_title, onClickHandler } =
+    props;
 
   return (
-    <CardContainer>
+    <CardContainer onClick={onClickHandler}>
       <div className="image">
         <img src={user_image} alt={name} />
       </div>
       <div className="titles_content">
         <div className="fullName">
-          <h3>
+          <strong>
             <span>{prefix}</span>
             <span>{name}</span>
             <span>{lastName}</span>
-          </h3>
+          </strong>
         </div>
         <div className="title">
           <p>{user_title}</p>

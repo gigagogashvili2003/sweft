@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
 import useGetRequest from "hooks/useGetRequest";
 import { MainContainer, UsersContainer } from "./MainStyled";
-import { USERL_BASE_URL } from "config/globals";
+import { USERS_BASE_URL } from "config/globals";
 import UserCard from "library/user_card/UserCard";
+import { useNavigate } from "react-router-dom";
+import { getUserCard } from "utils/helper";
 
 const Main = () => {
+  const navigate = useNavigate();
+
   const {
     sendRequest: getUsersData,
     isLoading: usersIsLoading,
@@ -13,25 +17,12 @@ const Main = () => {
   } = useGetRequest();
 
   useEffect(() => {
-    getUsersData(`${USERL_BASE_URL}1/20`);
+    getUsersData(`${USERS_BASE_URL}1/100`);
   }, []);
-
-  console.log(usersData);
 
   return (
     <MainContainer>
-      <UsersContainer>
-        {usersData?.list?.map((user) => (
-          <UserCard
-            key={user.id}
-            user_image={`${user.imageUrl}/v=${user.id}`}
-            prefix={user.prefix}
-            name={user.name}
-            lastName={user.lastName}
-            user_title={user.title}
-          />
-        ))}
-      </UsersContainer>
+      <UsersContainer>{getUserCard(usersData?.list, navigate)}</UsersContainer>
     </MainContainer>
   );
 };
