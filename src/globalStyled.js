@@ -59,6 +59,10 @@ i {
     box-sizing: border-box;
 }
 
+html {
+	font-family: "Roboto", sans-serif;
+}
+
 /* Global classnames */
 
 .flex_align_center {
