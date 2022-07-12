@@ -58,4 +58,26 @@ i {
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+.flex_align_center {
+	display: flex;
+    align-items: center;
+}
+
+.flex_justify_center {
+	display: flex;
+	justify-content: center;
+}
+
+.flex_center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex_column {
+	display: flex;
+	flex-direction: column;
+}
+
 `;

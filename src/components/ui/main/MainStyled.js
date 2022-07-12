@@ -6,8 +6,6 @@ export const MainContainer = styled.main`
 `;
 
 export const UsersContainer = styled.div`
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 `;

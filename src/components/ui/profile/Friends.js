@@ -7,7 +7,9 @@ const Friends = ({ friends }) => {
   const navigate = useNavigate();
 
   return (
-    <FriendsContainer>{getUserCard(friends?.list, navigate)}</FriendsContainer>
+    <FriendsContainer className="flex_justify_center">
+      {getUserCard(friends?.list, navigate)}
+    </FriendsContainer>
   );
 };
 

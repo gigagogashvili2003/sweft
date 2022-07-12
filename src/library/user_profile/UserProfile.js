@@ -20,7 +20,7 @@ const UserProfile = ({ user }) => {
   ];
 
   return (
-    <UserProfileContainer>
+    <UserProfileContainer className="flex_center">
       <div className="header_image_block">
         <img src={imageUrl} alt={name} />
       </div>
@@ -31,7 +31,7 @@ const UserProfile = ({ user }) => {
           <div className="info">
             <div className="titles">
               <div className="fullName">
-                <strong>
+                <strong className="flex_align_center">
                   <span>{prefix}</span>
                   <span>{name}</span>
                   <span>{lastName}</span>
@@ -41,9 +41,12 @@ const UserProfile = ({ user }) => {
                 <i>{title}</i>
               </div>
             </div>
-            <div className="conf_info">
+            <div className="conf_info flex_column">
               {infoColumns?.map((column) => (
-                <div className="conf_single_info" key={column.text}>
+                <div
+                  className="conf_single_info flex_align_center"
+                  key={column.text}
+                >
                   <u>{column.text}</u>
                   <span>{user && user[column.key]}</span>
                 </div>
@@ -56,14 +59,17 @@ const UserProfile = ({ user }) => {
         <fieldset>
           <legend>Address</legend>
           <div className="company">
-            <strong>
+            <strong className="flex_align_center ">
               <span>{user?.company?.name}</span>
               <span>{user?.company?.suffix}</span>
             </strong>
           </div>
-          <div className="conf_info">
+          <div className="conf_info flex_column">
             {addressColumns?.map((column) => (
-              <div className="conf_single_info" key={column.text}>
+              <div
+                className="conf_single_info flex_align_center"
+                key={column.text}
+              >
                 <u>{column.text}</u>
                 <span>{user && user?.address[column.key]}</span>
               </div>

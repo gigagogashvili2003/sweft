@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import useGetRequest from "hooks/useGetRequest";
 import { MainContainer, UsersContainer } from "./MainStyled";
 import { USERS_BASE_URL } from "config/globals";
-import UserCard from "library/user_card/UserCard";
+
 import { useNavigate } from "react-router-dom";
 import { getUserCard } from "utils/helper";
 
@@ -22,7 +22,9 @@ const Main = () => {
 
   return (
     <MainContainer>
-      <UsersContainer>{getUserCard(usersData?.list, navigate)}</UsersContainer>
+      <UsersContainer className="flex_justify_center">
+        {getUserCard(usersData?.list, navigate)}
+      </UsersContainer>
     </MainContainer>
   );
 };

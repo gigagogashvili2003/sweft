@@ -16,8 +16,6 @@ export const CardContainer = styled.div`
 
     .fullName {
       strong {
-        display: flex;
-        align-items: center;
         column-gap: 5px;
         font-size: 16px;
         line-height: 28px;

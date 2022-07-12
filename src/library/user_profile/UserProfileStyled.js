@@ -3,10 +3,6 @@ import styled from "styled-components";
 export const UserProfileContainer = styled.div`
   width: 100%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   fieldset,
   legend {
     margin: 0;
@@ -36,8 +32,6 @@ export const UserProfileContainer = styled.div`
             strong {
               font-size: 16px;
               line-height: 25px;
-              display: flex;
-              align-items: center;
               column-gap: 5px;
             }
           }
@@ -58,8 +52,6 @@ export const UserProfileContainer = styled.div`
         strong {
           font-size: 16px;
           line-height: 25px;
-          display: flex;
-          align-items: center;
           column-gap: 7px;
         }
       }
@@ -67,12 +59,8 @@ export const UserProfileContainer = styled.div`
   }
 
   .conf_info {
-    display: flex;
-    flex-direction: column;
     row-gap: 7px;
     .conf_single_info {
-      display: flex;
-      align-items: center;
       column-gap: 5px;
     }
   }

@@ -14,7 +14,7 @@ const UserCard = (props) => {
       </div>
       <div className="titles_content">
         <div className="fullName">
-          <strong>
+          <strong className="flex_align_center">
             <span>{prefix}</span>
             <span>{name}</span>
             <span>{lastName}</span>

@@ -9,8 +9,6 @@ export const ProfileContainer = styled.div`
 
 export const FriendsContainer = styled.div`
   padding-block: 20px;
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 `;
