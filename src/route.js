@@ -1,6 +1,8 @@
 import Profile from "components/ui/profile/Profile";
 import Main from "./components/ui/main/Main";
 
+// Dynamical routes/
+
 const routes = [
   {
     path: "/",

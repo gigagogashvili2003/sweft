@@ -2,8 +2,10 @@ import React from "react";
 import { UserProfileContainer } from "./UserProfileStyled";
 
 const UserProfile = ({ user }) => {
-  const { imageUrl, name, prefix, lastName, title } = user || {};
+  const { imageUrl, name, prefix, lastName, title, id } = user || {};
 
+  // Array of objects which holds exact title, and key.
+  // It's cause to dont repeat similar code a lot.
   const infoColumns = [
     { text: "Email:", key: "email" },
     { text: "Ip Address:", key: "ip" },
@@ -11,6 +13,7 @@ const UserProfile = ({ user }) => {
     { text: "Job Type:", key: "jobType" },
   ];
 
+  // Same as above.
   const addressColumns = [
     { text: "City:", key: "city" },
     { text: "Country:", key: "country" },
@@ -22,9 +25,9 @@ const UserProfile = ({ user }) => {
   return (
     <UserProfileContainer className="flex_center">
       <div className="header_image_block">
-        <img src={imageUrl} alt={name} />
+        <img src={`${imageUrl}?v=${id}`} alt={`${name} ${lastName}`} />
       </div>
-      <div className="header_info_block">
+      <div className="header_info_block p_10px">
         <fieldset>
           <legend>Info</legend>
 
@@ -55,7 +58,7 @@ const UserProfile = ({ user }) => {
           </div>
         </fieldset>
       </div>
-      <div className="header_address_block">
+      <div className="header_address_block p_10px">
         <fieldset>
           <legend>Address</legend>
           <div className="company">

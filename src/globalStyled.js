@@ -59,6 +59,8 @@ i {
     box-sizing: border-box;
 }
 
+/* Global classnames */
+
 .flex_align_center {
 	display: flex;
     align-items: center;
@@ -78,6 +80,14 @@ i {
 .flex_column {
 	display: flex;
 	flex-direction: column;
+}
+
+.p_10px{
+	padding: 10px;
+}
+
+.p_block_25px {
+	padding-block: 25px;
 }
 
 `;

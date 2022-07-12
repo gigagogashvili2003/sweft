@@ -3,10 +3,14 @@ import styled from "styled-components";
 export const UserProfileContainer = styled.div`
   width: 100%;
 
-  fieldset,
-  legend {
+  & fieldset,
+  & legend {
     margin: 0;
     padding: 0;
+  }
+
+  & fieldset {
+    padding: 10px;
   }
 
   .header_image_block {
@@ -19,22 +23,11 @@ export const UserProfileContainer = styled.div`
   .header_info_block {
     max-width: 650px;
     width: 100%;
-    padding: 10px;
 
     fieldset {
-      padding: 10px;
-
       .info {
         .titles {
           margin-bottom: 25px;
-
-          .fullName {
-            strong {
-              font-size: 16px;
-              line-height: 25px;
-              column-gap: 5px;
-            }
-          }
         }
       }
     }
@@ -43,19 +36,12 @@ export const UserProfileContainer = styled.div`
   .header_address_block {
     max-width: 350px;
     width: 100%;
-    padding: 10px;
+  }
 
-    fieldset {
-      padding: 10px;
-
-      .company {
-        strong {
-          font-size: 16px;
-          line-height: 25px;
-          column-gap: 7px;
-        }
-      }
-    }
+  & strong {
+    font-size: 16px;
+    line-height: 25px;
+    column-gap: 7px;
   }
 
   .conf_info {
