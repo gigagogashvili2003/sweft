@@ -1,4 +1,4 @@
-import { USER_BASE_URL } from "config/globals";
+import { USERS_BASE_URL } from "config/globals";
 import useGetRequest from "hooks/useGetRequest";
 import UserProfile from "library/user_profile/UserProfile";
 import React, { useEffect } from "react";
@@ -36,7 +36,7 @@ const Profile = () => {
 
   function getMoreFriendsData() {
     getFriendsData(
-      `${USER_BASE_URL}${userId}/friends/${
+      `${USERS_BASE_URL}${userId}/friends/${
         friendsData?.pagination?.nextPage || 1
       }/20`,
       (res) => {
@@ -50,8 +50,8 @@ const Profile = () => {
   }
 
   useEffect(() => {
-    getUserData(`${USER_BASE_URL}${userId}`);
-    getFriendsData(`${USER_BASE_URL}${userId}/friends/1/20`);
+    getUserData(`${USERS_BASE_URL}${userId}`);
+    getFriendsData(`${USERS_BASE_URL}${userId}/friends/1/20`);
   }, [userId, getUserData, getFriendsData]);
 
   return (

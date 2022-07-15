@@ -14,7 +14,7 @@ const SavedUsers = (props) => {
               // It's not'a good idea to use Math.random() as unique key but, I think for this project
               // It should be fine xd, i just didn't wanna to instal 3-rd party library, so that's all.
 
-              path={`/users/user/${user.id}`}
+              path={`/users/user/${user.id || 1}`}
               title={`${user.prefix} ${user.name} ${user.lastName}`}
             />
             {i < arr?.length - 1 && ">"}

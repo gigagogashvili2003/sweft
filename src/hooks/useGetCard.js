@@ -9,10 +9,10 @@ const useGetCard = (data) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const navigateToProfile = (user) => {
-    const { prefix, name, lastName } = user;
+    const { prefix, name, lastName, id } = user;
 
-    navigate(`/users/user/${user.id}`, { replace: false });
-    dispatch(userActions.userSave({ prefix, name, lastName }));
+    navigate(`/users/user/${id}`, { replace: false });
+    dispatch(userActions.userSave({ prefix, name, lastName, id }));
     window.scrollTo({ top: 0, left: 0 });
   };
 
