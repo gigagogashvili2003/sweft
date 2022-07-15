@@ -25,7 +25,7 @@ const UserProfile = ({ user }) => {
   return (
     <UserProfileContainer className="flex_center">
       <div className="header_image_block">
-        <img src={`${imageUrl}?v=${id}`} alt={`${name} ${lastName}`} />
+        <img src={`${imageUrl}?v=${id}`} alt="" />
       </div>
       <div className="header_info_block p_10px">
         <fieldset>

@@ -22,4 +22,8 @@ export const CardContainer = styled.div`
       }
     }
   }
+
+  @media (max-width: 1050px) {
+    max-width: 400px;
+  }
 `;

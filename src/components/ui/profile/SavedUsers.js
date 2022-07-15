@@ -8,18 +8,17 @@ const SavedUsers = (props) => {
   return (
     <SavedUsersCotnainer>
       {savedUsers?.map((user, i, arr) => {
-        console.log(user);
         return (
-          <>
+          <div key={i}>
             <SavedUserLink
               // It's not'a good idea to use Math.random() as unique key but, I think for this project
               // It should be fine xd, i just didn't wanna to instal 3-rd party library, so that's all.
-              key={Math.random()}
+
               path={`/users/user/${user.id}`}
               title={`${user.prefix} ${user.name} ${user.lastName}`}
             />
             {i < arr?.length - 1 && ">"}
-          </>
+          </div>
         );
       })}
     </SavedUsersCotnainer>

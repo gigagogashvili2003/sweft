@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const UserProfileContainer = styled.div`
   width: 100%;
+  display: flex;
+  align-items: center;
 
   & fieldset,
   & legend {
@@ -48,6 +50,16 @@ export const UserProfileContainer = styled.div`
     row-gap: 7px;
     .conf_single_info {
       column-gap: 5px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+
+    .header_address_block,
+    .header_info_block,
+    .header_image_block {
+      max-width: 100%;
     }
   }
 `;

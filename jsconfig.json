@@ -1,4 +1,3 @@
-// set baseUrl to src to dont use relative paths
 {
   "compilerOptions": {
     "baseUrl": "src"
